@@ -1,0 +1,188 @@
+<html>
+
+    <head>
+    <title>organization by Rambabu</title>
+
+<style>
+
+   h1 {
+
+    display: flex;
+
+    color:red;
+
+    align-items:center;
+
+    justify-content: center;
+
+padding: 50px;
+
+}
+
+button{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100px;
+
+    height:auto;
+
+    padding:10px;
+
+    margin: 10px 10px 10px 10px;
+
+    background-color: red;
+
+    box-shadow: rgb( 38,57,77)0px 20px 30px 0.1;
+
+}
+
+#div{
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 8px;
+
+border: 2px solid rgb(157, 255, 0);
+
+height: 200px;
+
+width: 300px;
+
+background-color: brown;
+
+}
+
+button:hover{
+
+    background-color: aqua;
+
+}
+
+#div1{
+
+    
+
+    position: relative;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 8px;
+
+border: 2px solid blue;
+
+height: 800px;
+
+width: 800px;
+
+background-color: aqua;
+
+}
+
+#input{
+
+    padding: 8px;
+
+    border: 1px solid rgb(255, 0, 106);
+
+  
+
+    color: solid black;
+
+}
+
+#vam{
+
+    display: block;
+
+}
+
+</style>
+
+    </head>
+
+<body>
+
+   <center> <div id="div1">
+
+    <h1>Send OTP</h1>
+
+    <button onclick="ram()">send</button>
+
+    <h2 id="ram">waiting ........... for the OTP <h3 id="vam"></h3></h2>
+
+    <div id="div">
+
+        <input type="number" id="input"  min="4"placeholder="Enter your OTP here">
+
+        <button onclick="submit()">submit</button>
+
+    </div>
+
+    </div>
+
+    </center>
+
+<script>
+
+    var otp='';
+
+    const ram=()=>{
+
+         otp='';
+
+    let digit='1234567890';
+
+    for(let i=1;i<=4;i++){
+
+        otp+=digit[Math.floor(Math.random()*10)];
+
+    }
+
+ 
+
+    
+
+    document.getElementById("vam").innerHTML="your OTP is "+otp+" dont send to another one";
+
+    
+
+    document.getElementById("ram").innerHTML=" ";
+
+     
+
+}
+
+    function submit(){
+
+        let t=document.getElementById("input").value;
+
+        if(t==otp){
+
+            alert("succefuly verified your OTP");
+
+        }
+
+        else{
+
+            alert("please enter valid OTP"); 
+
+        }
+
+    }
+
+</script>
+
+</body>
+
+    </html>
